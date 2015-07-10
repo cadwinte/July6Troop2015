@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Play2", "Play2\Play2.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockPaperScissors", "RockPaperScissors\RockPaperScissors.csproj", "{3FE04C15-4E29-45E4-B7EC-760E1A65E64F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSources", "DataSources\DataSources.csproj", "{FAF462C5-C8F1-48EC-AD15-144D1ADAF7B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{3FE04C15-4E29-45E4-B7EC-760E1A65E64F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FE04C15-4E29-45E4-B7EC-760E1A65E64F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FE04C15-4E29-45E4-B7EC-760E1A65E64F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAF462C5-C8F1-48EC-AD15-144D1ADAF7B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAF462C5-C8F1-48EC-AD15-144D1ADAF7B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAF462C5-C8F1-48EC-AD15-144D1ADAF7B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAF462C5-C8F1-48EC-AD15-144D1ADAF7B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

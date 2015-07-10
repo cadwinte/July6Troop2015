@@ -4,23 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Day_3_Homework
+namespace ProfanityCleaner
 {
     class Program
     {
         static void Main(string[] args)
         {
+            ProfanityCleaner cleaner = new ProfanityCleaner();
+
+            string cleanedWord = cleaner.Clean
         }
-    }
-
-    class Employee
-    {
-        public int ReportsTo();
-    }
-
-    class Bill : Employee
-    {
-        public int Reporting { get; set; }
-
     }
 }
