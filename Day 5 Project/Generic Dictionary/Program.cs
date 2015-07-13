@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,9 @@ namespace Generic_Dictionary
     {
         static void Main(string[] args)
         {
-
+            ProductCatalog catalog = new ProductCatalog();
+            Product product = catalog.Lookup("P2");
+            Debug.Assert(product != null, "Product with Id P2 not found");
 
             Dictionary<string, string> states = new Dictionary<string, string>();
             states.Add("ca", "California");

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day 2 Project", "Day 2 Proj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddNumbers", "AddNumbers\AddNumbers.csproj", "{2E93E48C-B6AF-4C71-8189-FCF87E31CBFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Play2", "Play2\Play2.csproj", "{0F5C9890-6971-4D4F-B39D-3D68EF366E7C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCounter", "Play2\WordCounter.csproj", "{0F5C9890-6971-4D4F-B39D-3D68EF366E7C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockPaperScissors", "RockPaperScissors\RockPaperScissors.csproj", "{3FE04C15-4E29-45E4-B7EC-760E1A65E64F}"
 EndProject
