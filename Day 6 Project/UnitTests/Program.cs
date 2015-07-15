@@ -10,6 +10,7 @@ namespace UnitTests
     {
         static void Main(string[] args)
         {
+
         }
     }
     
@@ -23,9 +24,7 @@ namespace UnitTests
         public decimal TaxCalculator(decimal price, decimal tax)
         {
             if (tax < 0.00m)
-            {
-                throw new ArgumentOutOfRangeException("Tax Rate cannot be less than zero");
-            }
+            {throw new ArgumentOutOfRangeException("Tax Rate cannot be less than zero");}
 
             if (Day == new DateTime(2015, 07, 16))
             {

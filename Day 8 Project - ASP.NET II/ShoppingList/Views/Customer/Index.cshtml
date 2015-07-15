@@ -1,0 +1,20 @@
+﻿@using ShoppingList.Models
+@using ShoppingList.Helpers
+@model IndexViewModel
+
+
+
+<ul>
+    @foreach (Customer customers in Model.Customers)
+    {
+        <li>@customers.FirstName</li>
+        <li>@customers.LastName</li>
+        <li>@customers.Items</li>
+        <li>@MyHelpers.FormatPrice(customers.Price)<b>
+            @Html.Image("http://tacospin.com/assets/img/taco.jpg")</b>
+        </li>
+        <li>@customers.GetItems().ToString("c")</li>
+    }
+</ul>
+
+

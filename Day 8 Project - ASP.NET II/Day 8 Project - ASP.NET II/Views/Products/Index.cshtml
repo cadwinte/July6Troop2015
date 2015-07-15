@@ -1,0 +1,10 @@
+﻿@using Day_8_Project___ASP.NET_II.Models
+@model IndexViewModel
+
+<ul>
+    @foreach (Product product in Model.Products)
+    {
+        <li>@product.Name</li>
+        <li>@product.Price</li>
+    }
+</ul>
