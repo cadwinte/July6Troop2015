@@ -13,10 +13,10 @@ namespace UnitTestProject.Tests
             //Arrange
             Calculator calc = new Calculator()
             {
-                FirstName = "Joaquine",
+                FirstName = "Koaquine",
                 LastName = "Hernandez",
                 Age = 35,
-                DayOfWeek = DayOfWeek.Thursday
+                Day = DateTime.Now
             };
 
 
@@ -25,7 +25,7 @@ namespace UnitTestProject.Tests
 
 
             //Assert
-            Assert.AreEqual(132.00m, result); //First parameter is what you expect, the second is what you actually got
+            Assert.AreEqual(108.00m, result); //First parameter is what you expect, the second is what you actually got
         }
     }
 }

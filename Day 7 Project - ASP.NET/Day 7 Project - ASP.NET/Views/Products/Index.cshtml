@@ -1,0 +1,17 @@
+﻿@using Day_7_Project___ASP.NET.Models
+
+@{
+    List<Product> products = new List<Product>
+    {
+        new Product { Name = "Eggs", Price = 2.33m },
+        new Product { Name = "Milk", Price = 1.99m },
+        new Product { Name = "Taco", Price = 2.25m }
+    };
+}
+
+<ul>
+    @foreach (var product in products)
+    {
+        <li>@product.Name</li>
+    }
+</ul>

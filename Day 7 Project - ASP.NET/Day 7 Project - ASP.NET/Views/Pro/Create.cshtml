@@ -1,0 +1,48 @@
+﻿@using Day_7_Project___ASP.NET.Models
+
+@{
+    List<ProOS> pro = new List<ProOS>
+    {
+        new ProOS { Name = "Socks", Price = 1.99m, OnSale = "Buy 1 get 1 free" },
+        new ProOS { Name = "Apples", Price = 1.25m, OnSale = "12 for the price of 1" },
+        new ProOS { Name = "Oranges", Price = 2.75m, OnSale = "3 for 1" },
+        new ProOS { Name = "Avacados", Price = 5.00m },
+        new ProOS { Name = "Watermelon", Price = 3.50m, OnSale = "Buy 1 get 1 free" }
+    };
+
+    List<NewPro> pro1 = new List<NewPro>
+    {
+        new NewPro { Name = "Avacados", Price = 5.00m },
+        new NewPro { Name = "Pumpkins", Price = 15.00m }
+    };
+
+    Pro[] inventory = new Pro[]
+    {
+        new ProOS { Name = "Socks", Price = 1.99m, OnSale = "Buy 1 get 1 free" },
+        new ProOS { Name = "Apples", Price = 1.25m, OnSale = "12 for the price of 1" },
+        new ProOS { Name = "Oranges", Price = 2.75m, OnSale = "3 for 1" },
+        new NewPro { Name = "Avacados", Price = 5.00m },
+        new NewPro { Name = "Pumpkins", Price = 15.00m },
+        new ProOS { Name = "Avacados", Price = 5.00m },
+        new ProOS { Name = "Watermelon", Price = 3.50m, OnSale = "Buy 1 get 1 free" }
+    };
+}
+
+@*<ul>
+    @foreach (var x in pro)
+    {
+        <li style="background-color: green; text-decoration-color: white">@x.Name</li>
+    <li style="background-color: green; text-decoration-color: white">@x.Price</li>
+        <li style="background-color: green; text-decoration-color: white">@x.OnSale</li>
+    }
+</ul>*@
+
+<ul>
+    @foreach (var y in inventory)
+    {
+        <li>@y.Name</li>
+        <li>@y.Price</li>
+    <li style="background-color: green; text-decoration-color: white">@y.OnSale</li>
+
+    }
+</ul>

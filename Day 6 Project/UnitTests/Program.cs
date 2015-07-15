@@ -18,7 +18,7 @@ namespace UnitTests
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Age { get; set; }
-        public DayOfWeek DayOfWeek { get; set; }
+        public DateTime Day { get; set; }
 
         public decimal TaxCalculator(decimal price, decimal tax)
         {
@@ -27,7 +27,7 @@ namespace UnitTests
                 throw new ArgumentOutOfRangeException("Tax Rate cannot be less than zero");
             }
 
-            if (DayOfWeek == DayOfWeek.Thursday)
+            if (Day == new DateTime(2015, 07, 16))
             {
                 tax += tax;
             }
