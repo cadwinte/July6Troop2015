@@ -1,0 +1,25 @@
+﻿@using ShoppingList.Models
+@using ShoppingList.Helpers
+@model IndexViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>TacoTacoBurrito</h2>
+
+<div>
+    @Model.FirstName @Model.LastName
+</div>
+
+<ul>
+    @foreach(Product product in Model.Products)
+    {
+        <li>@product.Name - @product.Price.ToString("c") <br />
+            @Html.Image("http://redirect.bigoven.com/pics/rs/256/grilled-fish-tacos-9.jpg")
+        </li>
+    }
+</ul>
+
+<div>
+    @Html.ShowPrice(m => m.Total)
+</div>
