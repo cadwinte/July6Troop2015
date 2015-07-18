@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace ValidationAttributes
+namespace Day_10_Project___ASP.Net_IV
 {
     public class RouteConfig
     {

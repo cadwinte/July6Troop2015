@@ -38,7 +38,7 @@ namespace ValidationAttributes.Models
         public string ConfirmPassword { get; set; }
 
         [DisplayName("Social Security Number")]
-        [RegularExpression ("^\\d{3}-\\d{2}-\\d{4}$", ErrorMessage = "Please enter a valid Social Security Number")]
+        [RegularExpression ("^\\d{3}\\d{2}\\d{4}$", ErrorMessage = "Please enter a valid Social Security Number")]
         public string SSN { get; set; }
 
         [MaxLength(50, ErrorMessage = "Your comments cannot be longer that 50 characters!")]
