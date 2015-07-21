@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Day_10_Project_ASP.NET_IV._1.Migrations;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace Day_10_Project_ASP.NET_IV._1.Models
     {
         static DataContext()
         {
-            Database.SetInitializer(new DatabaseInitializer());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataContext, Configuration>());
         }
 
         public IDbSet<Movie> Movies { get; set; }

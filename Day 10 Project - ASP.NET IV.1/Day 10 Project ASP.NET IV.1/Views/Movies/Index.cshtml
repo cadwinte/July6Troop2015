@@ -9,15 +9,17 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table" style="background-color: aquamarine">
+<table class="table">
     <tr>
-        <th>
+        <th style="background-color: aquamarine">
             @Html.DisplayNameFor(model => model.Title)
         </th>
-        <th>
+        <th style="background-color: aquamarine">
             @Html.DisplayNameFor(model => model.Director)
         </th>
-        <th></th>
+        <th style="background-color: aquamarine">
+
+        </th>
     </tr>
 
 @foreach (var item in Model) {
