@@ -15,5 +15,6 @@ namespace Day_10_Project_ASP.NET_IV._1.Models
         }
 
         public IDbSet<Movie> Movies { get; set; }
+        public IDbSet<Genre> Genres { get; set; }
     }
 }
