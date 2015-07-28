@@ -7,6 +7,7 @@ namespace ASPNETIdentityDemo.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using System.Security.Claims;
 
     internal sealed class Configuration : DbMigrationsConfiguration<ASPNETIdentityDemo.Models.ApplicationDbContext>
     {
@@ -46,6 +47,8 @@ namespace ASPNETIdentityDemo.Migrations
 
                 userManager.AddToRole(cade.Id, "Admin");
             }
+
+            userManager.AddClaim(cade.Id, new Claim("CanEditProducts", "true"));
         }
     }
 }

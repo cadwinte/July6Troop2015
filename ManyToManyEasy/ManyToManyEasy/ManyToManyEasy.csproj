@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1E4198D0-8BC8-454A-9B5E-2AAD3301E94F}</ProjectGuid>
+    <ProjectGuid>{1E4EF747-2D38-405A-B0C4-E3C54E402159}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Day_10_Project_ASP.NET_IV._1</RootNamespace>
-    <AssemblyName>Day 10 Project ASP.NET IV.1</AssemblyName>
+    <RootNamespace>ManyToManyEasy</RootNamespace>
+    <AssemblyName>ManyToManyEasy</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -45,15 +45,6 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Ninject">
-      <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
-    </Reference>
-    <Reference Include="Ninject.Web.Common">
-      <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Ninject.Web.Mvc">
-      <HintPath>..\packages\Ninject.MVC5.3.2.1.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -70,9 +61,6 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="WebActivatorEx">
-      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -98,70 +86,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Site.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <None Include="Properties\PublishProfiles\july6movieappuno.pubxml" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201507201438166_InitialCreate.cs" />
-    <Compile Include="Migrations\201507201438166_InitialCreate.Designer.cs">
-      <DependentUpon>201507201438166_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201507211413182_MadeTitleDirectorNonNull.cs" />
-    <Compile Include="Migrations\201507211413182_MadeTitleDirectorNonNull.Designer.cs">
-      <DependentUpon>201507211413182_MadeTitleDirectorNonNull.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201507211446304_AddGenres.cs" />
-    <Compile Include="Migrations\201507211446304_AddGenres.Designer.cs">
-      <DependentUpon>201507211446304_AddGenres.cs</DependentUpon>
+    <Compile Include="Migrations\201507231537257_initial.cs" />
+    <Compile Include="Migrations\201507231537257_initial.Designer.cs">
+      <DependentUpon>201507231537257_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\DataContext.cs" />
-    <Compile Include="Models\EFRepository.cs" />
-    <Compile Include="Models\GenericRepository.cs" />
-    <Compile Include="Models\GenericRepositoryExtensions.cs" />
-    <Compile Include="Models\Genre.cs" />
-    <Compile Include="Models\IGenericRepository.cs" />
-    <Compile Include="Models\IRepository.cs" />
-    <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\SchoolDbContext.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\StudentCourse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Movies\Index.cshtml" />
-    <Content Include="Views\Movies\Create.cshtml" />
-    <Content Include="Views\Movies\Edit.cshtml" />
-    <Content Include="Views\Movies\Delete.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -171,17 +117,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Home\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201507201438166_InitialCreate.resx">
-      <DependentUpon>201507201438166_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201507211413182_MadeTitleDirectorNonNull.resx">
-      <DependentUpon>201507211413182_MadeTitleDirectorNonNull.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201507211446304_AddGenres.resx">
-      <DependentUpon>201507211446304_AddGenres.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201507231537257_initial.resx">
+      <DependentUpon>201507231537257_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -197,9 +137,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>61600</DevelopmentServerPort>
+          <DevelopmentServerPort>53450</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:61586/</IISUrl>
+          <IISUrl>http://localhost:53450/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
