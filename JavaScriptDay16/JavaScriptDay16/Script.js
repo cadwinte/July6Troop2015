@@ -167,12 +167,3 @@
 //}
 
 
-
-var lister = function(x) {
-    var cart = new Set([x])
-    var y = cart.entries();
-    var z = y.length;
-        console.log(z);
-}
-
-lister("The cat and the cat ate the rat");

@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Movie App Index Brahhhh</h2>
+
+<ul id="moviesList"></ul>
+
+@section scripts {
+    <script>
+        $.getJSON('/api/movies').done(function (data) {
+            var moviesList = document.getElementById("moviesList")
+            data.forEach(function (movie) {
+                moviesList.innerHTML += '<li>' + movie.title + ": " + movie.director + '</li>';
+                
+            })
+        });
+    </script>
+}
