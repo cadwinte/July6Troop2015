@@ -1,0 +1,72 @@
+﻿<style>
+    .ng-invalid.ng-touched {
+    background-color: #FA787E;
+    }
+
+    .error {
+        color: red;
+    }
+</style>
+
+<div class="container">
+    <div ng-controller="EmployeeController as vm">
+        <form name="eForm" novalidate ng-submit="vm.add()" style="padding-top:30px">
+            <div>
+                <label>
+                    First Name:
+                    <input name="firstName" ng-model="vm.firstName" type="text" ng-required="true" />
+                    <span ng-show="eForm.firstName.$touched && eForm.firstName.$error.required" class="error">
+                        First Name is required.
+                    </span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Last Name:
+                    <input name="lastName" ng-model="vm.lastName" type="text" ng-required="true" />
+                    <span ng-show="eForm.lastName.$touched && eForm.lastName.$error.required" class="error">
+                        Last Name is required.
+                    </span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Age:
+                    <input name="age" ng-model="vm.age" type="number" ng-required="true" />
+                    <span ng-show="eForm.age.$touched && eForm.age.$error.required" class="error">
+                        Age is required.
+                    </span>
+                    <span ng-show="eForm.age.$touched && eForm.age.$error.number" class="error">
+                        Age must be a number.
+                    </span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Employee Type:
+                    <select name="type" ng-model="vm.selectedType" ng-options="type for type in vm.types" ng-required="true">
+
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Salary:
+                    <input name="fulltime" type="number" ng-model="vm.fulltime" ng-required="vm.isFullTime()" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Hourly Wage:
+                    <input name="parttime" type="number" ng-model="vm.parttime" ng-required="!vm.isFullTime()" />
+                </label>
+            </div>
+            <div>
+                <input type="submit" value="Add" ng-disabled="eForm.$invalid" />
+            </div>
+            <div>
+                <output>{{vm.message}}</output>
+            </div>
+        </form>
+    </div>
+</div>

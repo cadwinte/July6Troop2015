@@ -1,0 +1,23 @@
+﻿<div class="container">
+    <div ng-controller="NumberOperator as vm">
+        <div>
+            <label>
+                Number: <input type="number" ng-model="vm.firstNumber" />
+            </label>
+        </div>
+        <div>
+            <lable>
+                <strong>Number: <input type="number" ng-model="vm.secondNumber" /></strong>
+            </lable>
+        </div>
+        <button ng-click="vm.pickOperator('+')" type="button" class="btn btn-default">+</button>
+        <button ng-click="vm.pickOperator('-')" type="button" class="btn btn-default">-</button>
+        <button ng-click="vm.pickOperator('*')" type="button" class="btn btn-default">*</button>
+        <button ng-click="vm.pickOperator('/')" type="button" class="btn btn-default">/</button>
+        <button ng-click="vm.pickOperator('%')" type="button" class="btn btn-default">%</button>
+        <button ng-click="vm.pickOperator('^')" type="button" class="btn btn-default">^</button>
+        <button ng-click="vm.pickOperator('#')" type="button" class="btn btn-default">#</button>
+        <button ng-click="vm.pickOperator('√')" type="button" class="btn btn-default">√</button>
+        <p>{{vm.firstNumber}} {{vm.operator}} {{vm.secondNumber}} = </p> <p >{{vm.result}}</p>
+    </div>
+</div> 

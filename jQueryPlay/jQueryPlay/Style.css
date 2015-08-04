@@ -1,0 +1,11 @@
+﻿.headerDiv1 {
+    background: 
+        /*linear-gradient(0deg, #fff, transparent),*/
+        url('http://www.fs.usda.gov/Internet/FSE_MEDIA/stelprdb5172546.jpg') fixed;
+    background-size: cover;
+    width: auto;
+    height: 1000px;
+    margin-top: -20px;
+}
+
+

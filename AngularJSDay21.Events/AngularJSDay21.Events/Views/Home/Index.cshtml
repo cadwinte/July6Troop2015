@@ -1,0 +1,15 @@
+﻿<h2>My App</h2>
+
+<div class="container">
+    <div ng-controller="FavoriteColorController as vm">
+        <h2>What is your favorite Color?</h2>
+        <button ng-click="vm.pickColor('RED!')" type="button" class="btn btn-danger">Red</button>
+        <button ng-click="vm.pickColor('GREEN!')" type="button" class="btn btn-success">Green</button>
+        <button ng-click="vm.pickColor('BLUE!')" type="button" class="btn btn-primary">Blue</button>
+        <button ng-click="vm.pickColor('ORANGE!')" type="button" class="btn btn-warning">Orange</button>
+        <button ng-click="vm.pickColor('PURPLE!')" type="button" class="btn btn-info">Purple</button>
+
+        <h2>Your Favorite Color is: </h2>
+        <output>{{vm.color}}</output>
+    </div>
+</div>

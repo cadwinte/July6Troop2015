@@ -1,0 +1,7 @@
+﻿<h2>Movies</h2>
+
+<div ng-controller="MovieListController as vm" ng-cloak>
+    <ul>
+        <li ng-repeat="movie in vm.movies">{{movie.title}} - {{movie.director}}</li>
+    </ul>
+</div>

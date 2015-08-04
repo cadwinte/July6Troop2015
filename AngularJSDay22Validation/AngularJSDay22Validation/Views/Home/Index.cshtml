@@ -1,0 +1,43 @@
+﻿<style>
+    .ng-invalid.ng-touched {
+        background-color: #FA787E;
+    }
+
+    .error {
+        color: red;
+    }
+</style>
+
+<div class="container">
+    <div ng-controller="CarController as vm">
+        <form name="carForm" novalidate ng-submit="vm.add()" style="padding-top:30px">
+            <div>
+                <label>
+                    Model:
+                    <input name="model" ng-model="vm.model" type="text" ng-required="true" />
+                    <span ng-show="carForm.model.$touched && carForm.model.$error.required" class="error">
+                        Car model is required.
+                    </span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Price:
+                    <input name= "price" ng-model="vm.price" type="number" ng-required="true" />
+                    <span ng-show="carForm.price.$touched && carForm.price.$error.required" class="error">
+                        Car price is required.
+                    </span>
+                    <span ng-show="carForm.price.$touched && carForm.price.$error.number" class="error">
+                        Car price must be a number.
+                    </span>
+                </label>
+            </div>
+            <div>
+                <input type="submit" value="Add" ng-disabled="carForm.$invalid"/>
+            </div>
+            <div>
+                <output>{{vm.message}}</output>
+            </div>
+        </form>
+    </div>
+</div>

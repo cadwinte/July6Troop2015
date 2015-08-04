@@ -1,0 +1,19 @@
+﻿<div class="container">
+    <div>
+        <label>
+            Customer Name: <input type="text" ng-model="vm.customerName" />
+        </label>
+    </div>
+    <div>
+        <lable>
+            Customer Insult: <input type="text" ng-model="vm.customerInsult" />
+        </lable>
+    </div>
+    <p>
+        Dear {{vm.customerName}}
+        <br />
+        I <i>sincerely</i> apologize for my last communication when i called you a {{vm.customerInsult}}. Clearly, you are not a <i>{{vm.customerInsult}}</i>. Lo siento...
+        <br />
+        -- Customer Service
+    </p>
+</div>
