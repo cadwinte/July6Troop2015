@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularSecurityEuroI", "AngularSecurityEuroI\AngularSecurityEuroI.csproj", "{A59F6490-ECFA-4BC4-8665-F5F6051A431F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularSecurityEuroI.Data.Models", "AngularSecurityEuroI.Data.Models\AngularSecurityEuroI.Data.Models.csproj", "{5070D59D-60A4-441E-8178-DEB093B6B55B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularSecurityEuroI.Data", "AngularSecurityEuroI.Data\AngularSecurityEuroI.Data.csproj", "{45B6D265-5B5C-4B52-974C-AC810F8F7A7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A59F6490-ECFA-4BC4-8665-F5F6051A431F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A59F6490-ECFA-4BC4-8665-F5F6051A431F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A59F6490-ECFA-4BC4-8665-F5F6051A431F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A59F6490-ECFA-4BC4-8665-F5F6051A431F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5070D59D-60A4-441E-8178-DEB093B6B55B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5070D59D-60A4-441E-8178-DEB093B6B55B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5070D59D-60A4-441E-8178-DEB093B6B55B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5070D59D-60A4-441E-8178-DEB093B6B55B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45B6D265-5B5C-4B52-974C-AC810F8F7A7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45B6D265-5B5C-4B52-974C-AC810F8F7A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45B6D265-5B5C-4B52-974C-AC810F8F7A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45B6D265-5B5C-4B52-974C-AC810F8F7A7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

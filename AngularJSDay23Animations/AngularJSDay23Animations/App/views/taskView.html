@@ -1,0 +1,12 @@
+﻿<div class="container">
+    <div style="padding-top:25px">
+        <ul>
+            <li ng-repeat="task in vm.tasks" class="task" style="color: #222222"><strong>{{task.name}}</strong></li>
+        </ul>
+
+        <form ng-submit="vm.addTask()">
+            <input ng-model="vm.newTask" />
+            <input type="submit" value="Add" />
+        </form>
+    </div>
+</div>
