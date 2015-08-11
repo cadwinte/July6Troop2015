@@ -1,0 +1,18 @@
+﻿.jewel {
+    color: white;
+    text-align: center;
+    font-size: 6em;
+    font-family: "Trebuchet MS";
+    text-shadow: 2.75px 0 black, 0 2.75px black, 2.75px 0 black, 0 2.75px black;
+    padding-top: 250px;
+}
+
+.headerDiv1 {
+    background: 
+        url('https://goo.gl/oyVRMV') fixed;
+    background-size: cover;
+    width: auto;
+    height: 1000px;
+    margin-top: -20px;
+}
+

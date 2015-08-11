@@ -1,0 +1,16 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-6" ng-repeat="trail in vm.trails">
+            <div class="row">
+                <div>
+                    <h4>Trail#: <strong>{{trail.trailnumber}}</strong></h4>
+                    <h3>Trail: <strong>{{trail.name}}</strong></h3>
+                    <h2>Status: <strong>{{trail.status}}</strong></h2>
+                    <h4>Time: {{trail.time}}</h4>
+                    <span style='display:block !important; width: 170px; text-align: center; font-family: sans-serif; font-size: 12px;'><a href='http://www.wunderground.com/cgi-bin/findweather/getForecast?query=Canyon, TX' title='Canyon, TX Weather Forecast'><img src='http://weathersticker.wunderground.com/weathersticker/miniStates/language/english/US/TX/Canyon.gif' alt='Find more about Weather in Canyon, TX' /></a><br /></span>
+                    <hr />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

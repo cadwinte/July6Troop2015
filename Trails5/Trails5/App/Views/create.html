@@ -1,0 +1,33 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Create Trail</h2>
+            <form ng-submit="vm.add()">
+                <div>
+                    <label>
+                        Trail #: <input ng-model="vm.TrailNumber">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Trail Name: <input ng-model="vm.Name">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Trail Status:
+                        <select name="status" ng-model="vm.Status" ng-options="status for status in vm.statuses" ng-required="true"></select>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Update Time: <input ng-model="vm.Time" type="datetime-local">
+                    </label>
+                </div>
+                <div>
+                    <input type="submit" value="Add" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
