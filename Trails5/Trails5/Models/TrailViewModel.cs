@@ -7,6 +7,7 @@ namespace Trails5.Models
 {
     public class TrailViewModel
     {
+        public int Id { get; set; }
         public int Trailnumber { get; set; }
         public string Name { get; set; }
         public string Status { get; set; }

@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+    <title>Texas Bike Trails</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container" ng-controller="HeaderController as vm">
+        <div class="container-fluid" ng-controller="HeaderController as vm">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
@@ -20,10 +20,10 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#/login">Login</a></li>
-                    <li><a ng-click="vm.logout()" style="cursor:pointer">Logout</a></li>
-                    <li><a href="#/trails">Trails</a></li>
-                    <li><a href="#/create">Create</a></li>
+                    <li><a href="#/login" ng-hide="vm.isLoggedIn()">Login</a></li>
+                    <li><a ng-click="vm.logout()" ng-show="vm.isLoggedIn()" style="cursor:pointer">Logout</a></li>
+                    <li><a href="#/trails" ng-show="vm.isLoggedIn()">Trails</a></li>
+                    <li><a href="#/create" ng-show="vm.isLoggedIn()">Create</a></li>
                 </ul>
             </div>
         </div>

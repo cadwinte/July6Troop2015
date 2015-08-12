@@ -10,10 +10,9 @@
         .controller('CreateTrailsController', ['createService', CreateTrailsController]);
 
 
-
+    //HEAD CONTROLLER
     function HeaderController(loginService, $location) {
         var vm = this;
-
         vm.isLoggedIn = isLoggedIn;
         vm.logout = logout;
 
@@ -27,6 +26,7 @@
         }
     }
 
+    //HOME CONTROLLER
     function HomeController(trailsService) {
         var vm = this;
 
@@ -41,6 +41,7 @@
         }
     }
 
+    //LOGIN CONTROLLER
     function LoginController(loginService, $location) {
         var vm = this;
         vm.login = login;
@@ -67,13 +68,58 @@
         }
     }
 
+    //TRAILS CONTROLLER
     function TrailsController(trailsService) {
         var vm = this;
+        vm.editTrail = editTrail;
+        vm.addEdit = addEdit;
+        vm.edit = {};
+        vm.removeTrail = removeTrail;
+
+        function removeTrail() {
+            trailsService.deleteTrail().then(trabajo, noTrabajo)
+        }
+
+        function trabajo() {
+            window.location = "/#/";
+            console.log(trail);
+        }
+
+        function noTrabajo() {
+            alert('It did not delete');
+        }
+
+
+        function editTrail() {
+            trailsService.edit(vm.edit).then(pass, noPass);
+
+        }
+
+        function pass(data) {
+            trailsService.getTrails().then(success, fail);
+        }
+
+        function noPass() { }
+
+        function addEdit(trail) {
+            vm.edit.id = trail;
+
+            vm.statuses = [
+                'Clear',
+                'Closed',
+                'Flooded',
+                'Muddy',
+                'Blocked',
+                'Damanged'
+            ];
+            
+        }
 
         trailsService.getTrails().then(success, fail);
 
         function success(data) {
             vm.trails = data;
+            //console.log(data);
         }
 
         function fail() {
@@ -81,11 +127,11 @@
         }
     }
 
+    //CREATE TRAILS CONTROLLER
     function CreateTrailsController(createService) {
         var vm = this;
-
         vm.add = add;
-
+        
         function add() {
             var trail = {
                 trailNumber: vm.TrailNumber,
@@ -106,11 +152,9 @@
         ];
 
         function success() {
-            alert('submitted!')
+            window.location = "/#/";            
         }
 
-        function fail() {
-
-        }
+        function fail() {}
     }
 })();

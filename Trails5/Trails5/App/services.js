@@ -8,6 +8,8 @@
         .factory('authService', ['$window', '$q', authService])
         .factory('createService', ['$http', '$q', '$window', createService])
 
+
+    //AUTH SERVICE
     function authService($window, $q) {
         var service = {};
 
@@ -25,29 +27,30 @@
         return service;
     }
 
+    //LOGINSERVICE
     function loginService($http, $q, $window) {
         var service = {};
         service.login = login;
         service.isLoggedIn = isLoggedIn;
         service.logout = logout;
-        service.register = register;
+        //service.register = register;
 
-        function register(email, password, confirmPassword) {
-            var deferred = $q.defer();
-            $http({
-                url: '/api/Account/Register',
-                method: 'POST',
-                data: {
-                    'email': email, 'password': password, 'confirmPassword': confirmPassword
-                }
-            }).success(function (data) {
-                deferred.resolve();
-            }).error(function (data) {
-                deferred.reject(data);
-            });
+        //function register(email, password, confirmPassword) {
+        //    var deferred = $q.defer();
+        //    $http({
+        //        url: '/api/Account/Register',
+        //        method: 'POST',
+        //        data: {
+        //            'email': email, 'password': password, 'confirmPassword': confirmPassword
+        //        }
+        //    }).success(function (data) {
+        //        deferred.resolve();
+        //    }).error(function (data) {
+        //        deferred.reject(data);
+        //    });
 
-            return deferred.promise;
-        }
+        //    return deferred.promise;
+        //}
 
         function logout() {
             $window.sessionStorage.removeItem('token');
@@ -78,9 +81,45 @@
         return service;
     }
 
+
+    //TRAILS SERVICE
     function trailsService($http, $q, $window) {
         var service = {};
         service.getTrails = getTrails;
+        service.edit = edit;
+        service.deleteTrail = deleteTrail;
+
+        function deleteTrail(trail) {
+            var deferred = $q.defer();
+
+            $http({
+                url: '/api/trails/',
+                method: 'DELETE',
+                data: trail
+            }).success(function (data) {
+                deferred.resolve(data);
+            }).error(function (data) {
+                deferred.reject();
+            });
+
+            return deferred.promise;
+        }
+
+        function edit(trail) {
+            var deferred = $q.defer();
+
+            $http({
+                url: '/api/trails/EditTrail',
+                method: 'POST',
+                data: trail
+            }).success(function (data) {
+                deferred.resolve(data);
+            }).error(function (data) {
+                deferred.reject();
+            });
+
+            return deferred.promise;
+        }
 
         function getTrails() {
             var deferred = $q.defer();
@@ -100,6 +139,8 @@
         return service;
     }
 
+
+    //CREATE SERVICE
     function createService($http, $q, $window) {
         var service = {};
         var trails = [];
@@ -109,7 +150,7 @@
             var deferred = $q.defer();
 
             $http({
-                url: '/api/trails',
+                url: '/api/trails/AddTrail',
                 method: 'POST',
                 data: trail 
             }).success(function () {
@@ -124,5 +165,4 @@
 
         return service;
     }
-
 })();

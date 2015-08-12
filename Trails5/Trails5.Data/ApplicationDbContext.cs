@@ -22,5 +22,6 @@ namespace Trails5.Data
         {
             return new ApplicationDbContext();
         }
+
     }
 }

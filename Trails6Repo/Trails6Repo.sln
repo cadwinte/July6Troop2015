@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trails6Repo", "Trails6Repo\Trails6Repo.csproj", "{22D6B6C3-A87E-446F-926C-6510E0F2EA42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trails6Repo.Data", "Trails6Repo.Data\Trails6Repo.Data.csproj", "{8CABC263-BF4F-43B6-BE2D-E96858F3F7E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trails6Repo.Data.Models", "Trails6Repo.Data.Models\Trails6Repo.Data.Models.csproj", "{30C36694-1DF4-4115-B2B8-17D9B3C36C87}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22D6B6C3-A87E-446F-926C-6510E0F2EA42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22D6B6C3-A87E-446F-926C-6510E0F2EA42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22D6B6C3-A87E-446F-926C-6510E0F2EA42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22D6B6C3-A87E-446F-926C-6510E0F2EA42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CABC263-BF4F-43B6-BE2D-E96858F3F7E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CABC263-BF4F-43B6-BE2D-E96858F3F7E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CABC263-BF4F-43B6-BE2D-E96858F3F7E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CABC263-BF4F-43B6-BE2D-E96858F3F7E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30C36694-1DF4-4115-B2B8-17D9B3C36C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30C36694-1DF4-4115-B2B8-17D9B3C36C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30C36694-1DF4-4115-B2B8-17D9B3C36C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30C36694-1DF4-4115-B2B8-17D9B3C36C87}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
