@@ -220,6 +220,7 @@
     <Content Include="App\Views\create.html" />
     <Content Include="App\Views\home.html" />
     <Content Include="App\Views\login.html" />
+    <Content Include="App\Views\register.html" />
     <Content Include="Content\style.css" />
     <Content Include="App\Views\trails.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />

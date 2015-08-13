@@ -7,8 +7,31 @@
         .controller('LoginController', ['loginService', '$location', LoginController])
         .controller('TrailsController', ['trailsService', TrailsController])
         .controller('HeaderController', ['loginService', '$location', HeaderController])
-        .controller('CreateTrailsController', ['createService', CreateTrailsController]);
+        .controller('CreateTrailsController', ['createService', CreateTrailsController])
+        .controller('RegisterController', ['loginService', '$location', RegisterController]);
 
+
+    //REGISTER CONTROLLER
+    function RegisterController(loginService, $location) {
+        var vm = this;
+        vm.isLoading = false;
+        vm.register = register;
+
+        function register() {
+            vm.isLoading = !vm.isLoading;
+            loginService.register(vm.email, vm.password, vm.confirmPassword).then(success)
+        }
+
+        function success() {
+            vm.isLoading = !vm.isLoading;
+            $location.path('/login');
+        }
+
+        function fail() {
+            vm.isLoading = !vm.isLoading;
+            alert('Sorry, no register for you')
+        }
+    }
 
     //HEAD CONTROLLER
     function HeaderController(loginService, $location) {
@@ -76,23 +99,23 @@
         vm.edit = {};
         vm.removeTrail = removeTrail;
 
+        //Delete
         function removeTrail() {
             trailsService.deleteTrail().then(trabajo, noTrabajo)
         }
 
         function trabajo() {
             window.location = "/#/";
-            console.log(trail);
+
         }
 
         function noTrabajo() {
             alert('It did not delete');
         }
 
-
+        //Update
         function editTrail() {
             trailsService.edit(vm.edit).then(pass, noPass);
-
         }
 
         function pass(data) {
@@ -115,6 +138,7 @@
             
         }
 
+        //Get
         trailsService.getTrails().then(success, fail);
 
         function success(data) {
@@ -137,7 +161,7 @@
                 trailNumber: vm.TrailNumber,
                 name: vm.Name,
                 status: vm.Status,
-                time: vm.Time
+                time: moment(vm.Time).format('dddd, MMMM Do YYYY, h:mm a')
             };
             createService.createTrails(trail).then(success, fail);
         }
@@ -158,3 +182,5 @@
         function fail() {}
     }
 })();
+
+

@@ -2,8 +2,8 @@
     'use strict';
 
     angular
-        .module('TrailApp', ['ngRoute'])
-        .config(['$routeProvider', '$httpProvider', Config]);
+        .module('TrailApp', ['ngRoute', 'angularMoment'])
+        .config(['$routeProvider', '$httpProvider', Config])
 
     function Config($routeProvider, $httpProvider) {
         $routeProvider
@@ -25,6 +25,11 @@
             .when('/create', {
                 templateUrl: '/app/views/create.html',
                 controller: 'CreateTrailsController',
+                controllerAs: 'vm'
+            })
+            .when('/register', {
+                templateUrl: '/app/views/register.html',
+                controller: 'RegisterController',
                 controllerAs: 'vm'
             })
             .otherwise({

@@ -77,6 +77,7 @@ namespace Trails5.Controllers.API
             return Ok();
         }
 
+        [HttpGet]
         public IHttpActionResult Delete(int id)
         {
             Trail trail = _db.Trails.Find(id);
@@ -85,6 +86,7 @@ namespace Trails5.Controllers.API
         }
 
         //[Authorize(Roles = "Admin")]
+        [HttpPost]
         [ActionName("Delete")]
         public IHttpActionResult DeleteReally(int id)
         {

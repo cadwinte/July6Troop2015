@@ -8,11 +8,13 @@
         <div class="col-md-6 text-center" ng-repeat="trail in vm.trails">
             <div class="row">
                 <div style="border:1px solid black">
-                    <h3 style="background-color:dodgerblue; text-align:center">Trail: <strong>{{trail.name}}</strong></h3>
-                    <h4>Trail#: <strong>{{trail.trailnumber}}</strong></h4>
+                    <h4 style="background-color:#1e78c1; text-align:center">Trail#: <strong>{{trail.trailnumber}}</strong></h4>
+                    <h3>Trail: <strong>{{trail.name}}</strong></h3>
                     <h2>Status: <strong>{{trail.status}}</strong></h2>
-                    <h4>Last Updated: <strong>{{trail.time}}</strong></h4>                  
+                    <h4>Updated: <time><strong>{{trail.time | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a'}}</strong></time></h4>                  
                     <span style='display:inline-block !important; width: 170px; text-align: center; font-family: sans-serif; font-size: 12px; color: white; '><a href='http://www.wunderground.com/cgi-bin/findweather/getForecast?query=Canyon, TX' title='Canyon, TX Weather Forecast'><img src='http://weathersticker.wunderground.com/weathersticker/miniStates/language/english/US/TX/Canyon.gif' alt='Find more about Weather in Canyon, TX' /></a><br /></span>
+                    <!--<span style="display: inline-block !important; width: 180px; text-align: center; font-family: sans-serif; font-size: 12px;"><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:79015.1.99999&bannertypeclick=wu_bluestripes" title="Canyon, Texas Weather Forecast" target="_blank"><img src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_bluestripes&airportcode=KAMA&ForcedCity=Canyon&ForcedState=TX&zip=79015&language=EN" alt="Find more about Weather in Canyon, TX" width="160" /></a><br><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:79015.1.99999&bannertypeclick=wu_bluestripes" title="Get latest Weather Forecast updates" style="font-family: sans-serif; font-size: 12px" target="_blank"></a></span>-->
+                    <!--<span style='display:inline-block !important; width: 488px; text-align: center; font-family: sans-serif; font-size: 12px;'><a href='http://www.wunderground.com/cgi-bin/findweather/getForecast?query=Canyon, TX' title='Canyon, TX Weather Forecast'><img src='http://weathersticker.wunderground.com/weathersticker/big2_cond/language/english/US/TX/Canyon.gif' alt='Find more about Weather in Canyon, TX' /></a><br><a href='http://www.wunderground.com' title='Get latest Weather Forecast updates' style='font-family: sans-serif; font-size: 12px;'></a></span>-->
                 </div>
                 <br />
             </div>

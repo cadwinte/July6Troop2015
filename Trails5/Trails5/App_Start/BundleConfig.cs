@@ -27,12 +27,13 @@ namespace Trails5
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                     "~/Scripts/angular.js",
-                    "~/Scripts/moment.js",
-                    "~/Scripts/angular-route.js",
+                    "~/Scripts/angular-route.js",                   
                     "~/app/app.js",
                     "~/app/app2.js",
                     "~/app/services.js",
-                    "~/app/controllers.js"));
+                    "~/app/controllers.js",
+                    "~/Scripts/moment.js",
+                    "~/Scripts/angular-moment.js"));
 
             BundleTable.EnableOptimizations = true;
         }
