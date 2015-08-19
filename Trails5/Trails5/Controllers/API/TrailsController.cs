@@ -33,7 +33,7 @@ namespace Trails5.Controllers.API
             return Ok(trails);
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [ActionName("AddTrail")]
         public IHttpActionResult Post(TrailViewModel trail)
         {
@@ -62,7 +62,7 @@ namespace Trails5.Controllers.API
         }
 
         //EDIT
-        //[Authorize(Roles = "Admin")]
+        [Authorize]
         [ActionName("EditTrail")]
         public IHttpActionResult TrailPost(Trail trail)
         {
@@ -85,8 +85,7 @@ namespace Trails5.Controllers.API
             return Ok(trail);
         }
 
-        //[Authorize(Roles = "Admin")]
-        [HttpPost]
+        [Authorize(Roles = "Admin")]
         [ActionName("Delete")]
         public IHttpActionResult DeleteReally(int id)
         {

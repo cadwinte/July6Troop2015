@@ -104,7 +104,7 @@
             trailsService.deleteTrail().then(trabajo, noTrabajo)
         }
 
-        function trabajo() {
+        function trabajo(trail) {
             window.location = "/#/";
 
         }
@@ -120,6 +120,8 @@
 
         function pass(data) {
             trailsService.getTrails().then(success, fail);
+            window.location = "/#/";
+
         }
 
         function noPass() { }
@@ -161,7 +163,7 @@
                 trailNumber: vm.TrailNumber,
                 name: vm.Name,
                 status: vm.Status,
-                time: moment(vm.Time).format('dddd, MMMM Do YYYY, h:mm a')
+                time: vm.Time                  
             };
             createService.createTrails(trail).then(success, fail);
         }
@@ -176,7 +178,11 @@
         ];
 
         function success() {
-            window.location = "/#/";            
+            window.location = "/#/";
+            trailNumber = '';
+            name = '';
+            status = '';
+            time = '';
         }
 
         function fail() {}

@@ -4,17 +4,18 @@
     font-size: 6em;
     font-family: "Trebuchet MS";
     text-shadow: 2.75px 0 black, 0 2.75px black, 2.75px 0 black, 0 2.75px black;
-    padding-top: 250px;
+    padding-top: 230px;
 }
 
 .headerDiv1 {
     background: 
-        url('https://goo.gl/oyVRMV') fixed;
+        url('https://goo.gl/td36LD') fixed;
     background-size: cover;
     width: auto;
     height: 1000px;
     margin-top: -20px;
     margin-left: -250px;
     margin-right: -250px;
-}
+} 
 
+/*https://goo.gl/oyVRMV*/

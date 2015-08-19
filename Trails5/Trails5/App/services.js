@@ -94,11 +94,11 @@
 
             $http({
                 url: '/api/trails/Delete',
-                method: 'POST',
+                method: 'DELETE',
                 data: id
-            }).success(function (id) {
+            }).success(function () {
                 deferred.resolve(id);
-            }).error(function (id) {
+            }).error(function () {
                 deferred.reject();
             });
 
